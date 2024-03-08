@@ -17,7 +17,7 @@
             text-align: center;
         }
 
-        header img {
+        #header-img {
             width: auto;
             height: 100px;
         }
@@ -53,20 +53,55 @@
             margin: 0;
         }
 
-        article {
+        #menu article {
             border: 1px solid #f2f2f2;
             padding: 20px;
-            margin: 20px 0;
+            margin: 20px 30px 0 30px;
         }
 
-        article img {
+        #menu article img {
             width: 100%;
             height: 200px;
             object-fit: cover;
         }
 
-        article h3 {
-            margin: 0;
+        #menu article h3 {
+            margin: 20px 0;
+        }
+
+        #order-form h2 {
+            margin-top: 50px;
+        }
+
+        #order-form form {
+            border: 1px solid #f2f2f2;
+            padding: 20px;
+            margin: 20px 30px 0 30px;
+        }
+
+        #order-form #quantity-item {
+            margin-bottom: 5px;
+        }
+
+        #order-form fieldset {
+            margin: 20px 0 20px 0;
+            padding: 20px;
+        }
+
+        #order-form textarea {
+            margin: 5px 0 20px 0;
+            padding: 20px;
+        }
+
+        #order-form textarea {
+            margin: 5px 0 10px 0;
+            padding: 20px;
+        }
+
+        #order-form #submitButton {
+            font-size: medium;
+            margin: 5px 0 20px 0;
+            padding: 20px;
         }
 
         footer {
@@ -75,10 +110,12 @@
             text-align: center;
         }
     </style>
+
 </head>
+
 <body>
     <header>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/QBano_Colombia_logo.png/1200px-QBano_Colombia_logo.png" alt="">
+        <img id="header-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/QBano_Colombia_logo.png/1200px-QBano_Colombia_logo.png" alt="">
         <h1>Qbano Sandwiches</h1>
         <nav>
             <ul>
@@ -92,7 +129,7 @@
 
         <section id="menu">
             <h2>Menu</h2>
-
+            
             <article>
                 <img src="https://b2cqbano.vtexassets.com/arquivos/ids/155543-500-auto" alt="">
                 <h3>Special Sandwich</h3>
@@ -127,34 +164,43 @@
             <h2>Place Your Order</h2>
 
             <form action="">
-                <label for="quantitySpecial">Special Sandwich</label>
-                <input type="number" id="quantitySpecial" name="quantitySpecial" min="0"><br>
 
-                <label for="quantityHawaiian">Hawaiian Sandwich</label>
-                <input type="number" id="quantityHawaiian" name="quantityChicken" min="0"><br>
+                <div id="quantity-item">
+                    <label for="quantitySpecial">Special Sandwich</label>
+                    <input type="number" id="quantitySpecial" name="quantitySpecial" min="0"><br>
+                </div>
 
-                <label for="quantityLamb">Lamb Sandwich</label>
-                <input type="number" id="quantityLamb" name="quantityhicken" min="0"><br>
+                <div id="quantity-item">
+                    <label for="quantityHawaiian">Hawaiian Sandwich</label>
+                    <input type="number" id="quantityHawaiian" name="quantityChicken" min="0"><br>
+                </div>
+                
+                <div id="quantity-item">
+                    <label for="quantityLamb">Lamb Sandwich</label>
+                    <input type="number" id="quantityLamb" name="quantityhicken" min="0"><br>
+                </div>
 
-                <label for="quantityChicken">Chicken Sandwich</label>
-                <input type="number" id="quantityChicken" name="quantityChicken" min="0"><br>
+                <div id="quantity-item">
+                    <label for="quantityChicken">Chicken Sandwich</label>
+                    <input type="number" id="quantityChicken" name="quantityChicken" min="0"><br>
+                </div>
 
                 <fieldset>
                     <legend>Additions</legend>
                     <input type="checkbox" id="cheese" name="additions" value="cheese">
                     <label for="cheese">Cheese</label><br>
-                    <input type="checkbox" id="lettuce" name="additions" value="lettuce">
-                    <label for="lettuce">Lettuce</label><br>
-                    <input type="checkbox" id="tomato" name="additions" value="tomato">
-                    <label for="tomato">Tomato</label><br>
-                    <input type="checkbox" id="mayonnaise" name="additions" value="mayonnaise">
-                    <label for="mayonnaise">Mayonnaise</label><br>
+                    <input type="checkbox" id="bacon" name="additions" value="bacon">
+                    <label for="bacon">Bacon</label><br>
+                    <input type="checkbox" id="pickles" name="additions" value="pickles">
+                    <label for="pickles">Pickles</label><br>
+                    <input type="checkbox" id="mushrooms" name="additions" value="mushrooms">
+                    <label for="mushrooms">Mushrooms</label><br>
                 </fieldset>
 
                 <label for="special-requests">Special request:</label><br>
                 <textarea name="special-requests"" id="special-requests"" cols="30" rows="10"></textarea><br>
 
-                <input type="submit" onclick="alert('Thank you for your purchase!');" value="Go to checkout">
+                <input id="submitButton" type="submit" onclick="alert('Thank you for your purchase!');" value="Go to checkout">
 
             </form>
 
@@ -164,5 +210,6 @@
     <footer>
         Made with love by Astrxnomo
     </footer>
+    
 </body>
 </html>
